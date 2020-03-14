@@ -1,0 +1,9 @@
+[build]
+  command = "make build"
+  publish = "public"
+
+# Redirect all URLs to 404.html
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

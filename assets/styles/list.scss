@@ -1,0 +1,22 @@
+.list {
+  ul {
+    list-style: none;
+    padding: 0;
+
+    .list-summary {
+      @include flexbox();
+
+      align-items: center;
+      margin-bottom: .5em;
+
+      .list-title {
+        font-weight: bold;
+        margin-right: 1em;
+      }
+
+      .list-descriptor {
+        white-space: nowrap;
+      }
+    }
+  }
+}

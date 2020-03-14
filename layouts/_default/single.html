@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main aria-role="main" class="main single">
+  <header>
+    <h1 class="title">{{ .Title }}</h1>
+    <div class="meta">
+      <div class="meta-group">
+        <div class="meta-item date">{{ .Date.Format "Jan 2, 2006" }}</div>
+        <div class="meta-item read-time">{{ math.Round (div (countwords .Content) 220.0) }} minutes</div>
+      </div>
+      <div class="meta-group">
+        {{ range .Params.tags }}
+        <div class="meta-item"><a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ lower . }}</a></div>
+        {{ end }}
+      </div>
+    </div>
+    <hr>
+  </header>
+  <article class="content">
+    {{ .Content }}
+  </article>
+</main>
+{{ end }}

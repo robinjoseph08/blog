@@ -1,0 +1,12 @@
+{{ define "main" }}
+<main aria-role="main" class="main taxonomy">
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </header>
+  {{ range .Pages }}
+  {{ .Render "summary" }}
+  {{ end }}
+</main>
+{{ end }}
+

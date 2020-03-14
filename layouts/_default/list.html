@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main aria-role="main" class="main list">
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </header>
+  <ul>
+  {{ range .Pages }}
+  <li class="list-summary">
+    <div class="list-title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </div>
+    <div class="list-descriptor">
+    {{ if .IsPage }}
+      {{ .Date.Format "2006-01-02" }}
+    {{ else }}
+      {{ .Pages | len }} post{{ if ne (.Pages | len) 1 }}s{{ end }}
+    {{ end }}
+    </div>
+  </li>
+  {{ end }}
+  </ul>
+</main>
+{{ end }}

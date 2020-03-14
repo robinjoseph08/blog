@@ -1,0 +1,208 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+body {
+  background: $alabaster;
+  color: $cod-gray;
+  font-family: $primary-font-family;
+  font-weight: normal;
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  @include flexbox();
+
+  height: 100%;
+  flex-direction: column;
+}
+
+.main {
+  @include border-box();
+
+  flex-grow: 1;
+  margin: 0 auto;
+  max-width: $max-width;
+  padding: 1em 2em;
+  width: 100%;
+}
+
+nav {
+  .container {
+    @include flexbox();
+
+    margin: 0 auto;
+    max-width: $max-width;
+
+    a {
+      @include flexbox();
+
+      align-items: center;
+      color: $cod-gray;
+      flex-direction: column;
+      text-decoration: none;
+
+      span {
+        padding: 1em;
+      }
+
+      &:after {
+        @include transition(width, 100ms, ease-out);
+
+        background-color: $curious-blue;
+        content: '';
+        height: 1px;
+        width: 0;
+      }
+
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  font-size: 20px;
+
+  .container {
+    @include flexbox();
+
+    align-items: center;
+    justify-content: center;
+    margin: 1em auto;
+    max-width: $max-width;
+
+    .middot {
+      @include disable-selection();
+
+      font-size: 16px;
+      margin: 0 .75em;
+    }
+
+    a {
+      color: $cod-gray;
+      text-decoration: none;
+
+      &:hover {
+        color: $curious-blue;
+      }
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+a {
+  color: $curious-blue;
+
+  &:hover {
+    color: darken($curious-blue, 7%);
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+hr {
+  background: $silver;
+  border: none;
+  height: 1px;
+  margin: 2em 0;
+}
+
+pre {
+  border-radius: 3px;
+  border: 1px solid $silver;
+  font-family: $monospace-font-family;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+
+  code {
+    background: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+code {
+  background-color: $alabaster;
+  border-radius: 3px;
+  border: 1px solid $silver;
+  font-family: $monospace-font-family;
+  font-size: 13px;
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+}
+
+input, textarea {
+  @include border-box;
+
+  -webkit-appearance: none;
+  background: #fff;
+  border-radius: 4px;
+  border: none;
+  font-family: $primary-font-family;
+  font-size: 14px;
+  padding: 5px 10px;
+  resize: none;
+
+  &.code {
+    font-family: $monospace-font-family;
+  }
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+input[type='text'], input[type='email'], input[type='password'], textarea {
+  border: 1px $silver solid;
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+  width: 80%;
+}
+
+button, input[type='submit'] {
+  -webkit-appearance: none;
+  background-color: $curious-blue;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: $primary-font-family;
+  font-size: 14px;
+  margin: 5px 10px;
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: darken($curious-blue, 7%);
+  }
+
+  &:active {
+    background-color: darken($curious-blue, 7%);
+  }
+
+  &:disabled {
+    background: $silver-chalice;
+    cursor: default;
+  }
+}
+
+.not-found {
+  @include flexbox();
+
+  justify-content: center;
+  align-items: center;
+}

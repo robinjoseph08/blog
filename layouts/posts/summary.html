@@ -1,0 +1,20 @@
+<div class="post-summary">
+  <div class="post-summary-header">
+    <h3><a href='{{ .Permalink }}'>{{ .Title }}</a></h3>
+    <div class="meta">
+      <div class="meta-group">
+        <div class="meta-item date">{{ .Date.Format "Jan 2, 2006" }}</div>
+        <div class="meta-item read-time">{{ math.Round (div (countwords .Content) 220.0) }} minutes</div>
+      </div>
+      <div class="meta-group">
+        {{ range .Params.tags }}
+        <div class="meta-item"><a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ lower . }}</a></div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  <p>{{ .Summary }}</p>
+  <div class="post-summary-footer">
+    <a href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
+  </div>
+</div>

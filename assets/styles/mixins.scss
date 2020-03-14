@@ -1,0 +1,64 @@
+@mixin animation($name, $duration, $fill-mode, $timing-function) {
+  -webkit-animation: $name $duration $fill-mode $timing-function;
+  -moz-animation: $name $duration $fill-mode $timing-function;
+  -ms-animation: $name $duration $fill-mode $timing-function;
+  -o-animation: $name $duration $fill-mode $timing-function;
+  animation: $name $duration $fill-mode $timing-function;
+}
+
+@mixin border-box() {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin disable-selection() {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -webkit-flexbox;
+  display: flex;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin transform($transform-list) {
+  -webkit-transform: $transform-list;
+  -moz-transform: $transform-list;
+  -ms-transform: $transform-list;
+  -o-transform: $transform-list;
+  transform: $transform-list;
+}
+
+@mixin transition($property, $duration, $timing-function) {
+  -webkit-transition: $property $duration $timing-function;
+  -moz-transition: $property $duration $timing-function;
+  -o-transition: $property $duration $timing-function;
+  transition: $property $duration $timing-function;
+}

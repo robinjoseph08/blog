@@ -1,0 +1,9 @@
+baseURL: https://rmj.io/blog
+markup:
+  highlight:
+    style: github
+taxonomies:
+  tag: tags
+title: robin's blog
+params:
+  subtitle: just a random collection of things i'm working on

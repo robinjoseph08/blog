@@ -1,0 +1,32 @@
+.meta {
+  @include flexbox();
+
+  flex-direction: column;
+  font-size: 14px;
+
+  .meta-group {
+    @include flexbox();
+
+    align-items: center;
+    margin-bottom: 1em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .meta-item {
+    margin-right: .5em;
+
+    &::after {
+      content: '\00b7';
+      margin-left: .5em;
+    }
+
+    &:last-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
