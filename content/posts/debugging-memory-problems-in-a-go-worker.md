@@ -1,7 +1,7 @@
 ---
 title: Debugging Memory Problems in a Go Worker
-date: 2020-03-16T10:00:00-0800
-publishdate: 2020-03-16
+date: 2020-03-25:00:00-0800
+publishdate: 2020-03-25
 tags:
 - Go
 - InterviewPlanner

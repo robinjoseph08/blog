@@ -21,7 +21,8 @@ doing this weekly update.
   practice as much as I can.
 - **Write things down so I don't forget them.** I tend to forget things
   (especially small details) if I don't write them down. And since I'm going
-  through the process of building out InterviewPlanner right now, I want to make
+  through the process of building out
+  [InterviewPlanner](https://interviewplanner.com) right now, I want to make
   sure that I remember all of it, the good and the bad. In case I ever end up
   doing this again, I want to capitalize on the experiences that I'm having now.
 - **Reflect on the past week.** Things are moving really quickly, but I want to
@@ -41,7 +42,8 @@ doing this weekly update.
 
 These updates will be about the various things I'm working on, but since most of
 my time is currently going to InterviewPlanner, they'll mostly be about that.
-But I might include some tidbits about PokedexTracker if they're interesting.
+But I might include some tidbits about
+[PokedexTracker](https://pokedextracker.com) if they're interesting.
 
 Now that we've got that out of the way, let's talk about how this week went!
 
