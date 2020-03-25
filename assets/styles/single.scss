@@ -24,6 +24,49 @@
       border: 2px $cod-gray solid;
     }
   }
+
+  .post-nav {
+    @include flexbox();
+
+    .post-nav-item {
+      flex: 1;
+
+      a {
+        @include flexbox();
+
+        color: $cod-gray;
+        text-decoration: none;
+        align-items: center;
+
+        &:hover {
+          color: $curious-blue;
+        }
+
+        .wrapper {
+          @include flexbox();
+
+          flex-direction: column;
+          flex-grow: 1;
+        }
+      }
+    }
+
+    .previous {
+      text-align: left;
+
+      .wrapper {
+        margin-left: 1em;
+      }
+    }
+
+    .next {
+      text-align: right;
+
+      .wrapper {
+        margin-right: 1em;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 550px) {

@@ -24,5 +24,29 @@
       Robin is the co-founder of <a href="https://interviewplanner.com" rel="noopener noreferrer" target="_blank">InterviewPlanner</a> and the co-creater of <a href="https://pokedextracker.com" rel="noopener noreferrer" target="_blank">PokédexTracker</a>. To stay up-to-date on new posts, follow him on <a href="https://twitter.com/robinjoseph08" rel="noopener noreferrer" target="_blank">Twitter</a>.
     </div>
   </div>
+  <div class="post-nav">
+    <div class="post-nav-item previous">
+      {{ if .Prev }}
+      <a href="{{ .Prev.Permalink }}">
+        {{ partial "fontawesome.html" "chevron-left" }}
+        <div class="wrapper">
+          <span><b>previous post</b></span>
+          <span>{{ .Prev.Title }}</span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+    <div class="post-nav-item next">
+      {{ if .Next }}
+      <a href="{{ .Next.Permalink }}">
+        <div class="wrapper">
+          <span><b>next post</b></span>
+          <span>{{ .Next.Title }}</span>
+        </div>
+        {{ partial "fontawesome.html" "chevron-right" }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
 </main>
 {{ end }}
