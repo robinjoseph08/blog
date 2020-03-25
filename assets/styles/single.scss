@@ -8,4 +8,35 @@
       width: 100%;
     }
   }
+
+  .author {
+    @include flexbox();
+
+    border: 2px $silver solid;
+    margin: 3em;
+    align-items: center;
+    padding: 2em;
+
+    img {
+      border-radius: 50%;
+      width: 100px;
+      margin-right: 2em;
+      border: 2px $cod-gray solid;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .single {
+    .author {
+      flex-direction: column;
+      margin: 3em 1em;
+      text-align: center;
+
+      img {
+        margin-right: 0;
+        margin-bottom: 2em;
+      }
+    }
+  }
 }

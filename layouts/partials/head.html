@@ -18,7 +18,7 @@
   <link rel="apple-touch-icon" href="/app/assets/images/favicon-120.png" sizes="120x120">
   <link rel="apple-touch-icon" href="/app/assets/images/favicon-152.png" sizes="152x152">
   <link rel="apple-touch-icon" href="/app/assets/images/favicon-180.png" sizes="180x180">
-  <meta property="og:description" content="Robin Joseph's personal blog">
+  <meta property="og:description" content="{{ if .Summary }}{{ .Summary }}{{ else }}Robin Joseph's personal blog{{ end }}">
   <meta property="og:title" content="{{ if eq .RelPermalink "/blog/" }}blog{{ else }}{{ .Title }}{{ end }} | rmj.io">
   <meta property="og:image" content="{{ .Site.BaseURL }}{{ if .Params.og }}{{ .Params.og }}{{ else }}images/main/og.png{{ end }}">
   <meta property="og:image:height" content="600">
@@ -37,4 +37,21 @@
 
     gtag('config', 'UA-45307701-2');
   </script>
+{{ if .IsPage }}
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "name": {{ .Title }},
+    "author": {
+      "@type": "Person",
+      "name": "Robin Joseph"
+    },
+    "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" }},
+    "image": {{ printf "%s%s" .Site.BaseURL .Params.og }},
+    "articleBody": {{ .Summary }},
+    "url": {{ .Permalink }}
+  }
+  </script>
+{{ end }}
 </head>
