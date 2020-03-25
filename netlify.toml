@@ -2,6 +2,9 @@
   command = "make build"
   publish = "public"
 
+[context.environment]
+  HUGO_VERSION = "0.68.3"
+
 # Redirect all URLs to 404.html
 [[redirects]]
   from = "/*"

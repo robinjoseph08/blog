@@ -26,22 +26,22 @@
   </div>
   <div class="post-nav">
     <div class="post-nav-item previous">
-      {{ if .Prev }}
-      <a href="{{ .Prev.Permalink }}">
+      {{ with .Prev }}
+      <a href="{{ .Permalink }}">
         {{ partial "fontawesome.html" "chevron-left" }}
         <div class="wrapper">
           <span><b>previous post</b></span>
-          <span>{{ .Prev.Title }}</span>
+          <span>{{ .Title }}</span>
         </div>
       </a>
       {{ end }}
     </div>
     <div class="post-nav-item next">
-      {{ if .Next }}
-      <a href="{{ .Next.Permalink }}">
+      {{ with .Next }}
+      <a href="{{ .Permalink }}">
         <div class="wrapper">
           <span><b>next post</b></span>
-          <span>{{ .Next.Title }}</span>
+          <span>{{ .Title }}</span>
         </div>
         {{ partial "fontawesome.html" "chevron-right" }}
       </a>
