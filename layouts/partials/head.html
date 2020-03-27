@@ -24,7 +24,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:title" content="{{ if eq .RelPermalink "/blog/" }}blog{{ else }}{{ .Title }}{{ end }} | rmj.io">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rmj.io/blog/">
+  <meta property="og:url" content="{{ .Permalink }}">
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:description" content="{{ if .Summary }}{{ .Summary }}{{ else }}Robin Joseph's personal blog{{ end }}">
   <meta property="twitter:image" content="{{ .Site.BaseURL }}{{ if .Params.og }}{{ .Params.og }}{{ else }}images/main/og.png{{ end }}">
